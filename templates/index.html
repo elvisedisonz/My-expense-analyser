@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Expense Analyzer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+
+<!-- DataTables -->
+<link
+rel="stylesheet"
+href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css"
+/>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="/static/style.css" />
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="brand-logo">₹</div>
+
+<div>
+<h2>Expense Analyzer</h2>
+<p>Finance Dashboard</p>
+</div>
+
+</div>
+
+<nav class="sidebar-nav">
+
+<button class="nav-btn active">
+📊 Dashboard
+</button>
+
+<button class="nav-btn">
+💸 Expenses
+</button>
+
+<button class="nav-btn">
+🔁 Reimbursements
+</button>
+
+<button class="nav-btn">
+📈 Analytics
+</button>
+
+</nav>
+
+<div class="theme-toggle-wrap">
+
+<button id="themeToggle">
+🌙 Dark Mode
+</button>
+
+</div>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main-content">
+
+<!-- HEADER -->
+
+<div class="page-header">
+
+<div>
+
+<h1>Expense Dashboard</h1>
+
+<p>
+Analyze expenses, reimbursements,
+spending trends & savings.
+</p>
+
+</div>
+
+<form id="uploadForm" class="upload-bar">
+
+<input
+type="file"
+name="file"
+required
+/>
+
+<input
+type="password"
+name="passwd"
+placeholder="Password"
+/>
+
+<input
+type="number"
+name="match_days"
+value="7"
+min="1"
+/>
+
+<button type="submit">
+Upload File
+</button>
+
+</form>
+
+</div>
+
+<!-- SUMMARY -->
+
+<section class="panel">
+
+<div class="section-title">
+<h3>Overview</h3>
+</div>
+
+<div
+class="summary-grid"
+id="summaryGrid"
+></div>
+
+</section>
+
+<!-- ANALYTICS -->
+
+<section class="analytics-grid">
+
+<!-- PIE CHART -->
+
+<div class="panel chart-panel">
+
+<div class="section-title">
+<h3>Expense Distribution</h3>
+</div>
+
+<div class="chart-wrap">
+<canvas id="pieChart"></canvas>
+</div>
+
+</div>
+
+<!-- TOP 10 EXPENSES -->
+
+<div class="panel chart-panel">
+
+<div class="section-title">
+<h3>Top 10 Expense Groups</h3>
+</div>
+
+<div class="chart-wrap">
+<canvas id="barChart"></canvas>
+</div>
+
+</div>
+
+<!-- TOP 10 SMALLEST -->
+
+<div class="panel chart-panel">
+
+<div class="section-title">
+<h3>Top 10 Individual Exp in Visible Table</h3>
+</div>
+
+<div class="chart-wrap">
+<canvas id="IntExpenseChart"></canvas>
+</div>
+
+</div>
+
+</section>
+
+<!-- GROUP TOOLBAR -->
+
+<section class="panel">
+
+<div class="section-title">
+<h3>Grouping</h3>
+</div>
+
+<div class="group-toolbar">
+
+<input
+type="text"
+id="groupName"
+placeholder="Enter Group Name"
+/>
+
+<select id="groupMode">
+<option value="paid_to">Paid To</option>
+<option value="notes">Notes</option>
+</select>
+
+<button onclick="saveGroup()">
+Group Selected
+</button>
+
+</div>
+
+</section>
+
+<!-- EXPENSE TABLE -->
+
+<section class="panel">
+
+<div class="section-title">
+<h3>Expenses</h3>
+</div>
+
+<div class="table-wrapper">
+
+<table
+id="expenseTable"
+class="display modern-table"
+style="width:100%"
+>
+
+<thead>
+
+<tr>
+<th>Select</th>
+<th>Date</th>
+<th>Merchant</th>
+<th>Notes</th>
+<th>Amount</th>
+<th>Balance</th>
+<th>Group</th>
+</tr>
+
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- REIMBURSEMENTS -->
+
+<section class="panel">
+
+<div class="section-title">
+<h3>Reimbursements</h3>
+</div>
+
+<div class="table-wrapper">
+
+<table id="matchedTable">
+
+<thead>
+
+<tr>
+<th>Date</th>
+<th>Credited</th>
+<th>Received From</th>
+<th>Expense Cancelled</th>
+<th>Paid To</th>
+</tr>
+
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

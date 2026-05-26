@@ -1,0 +1,56 @@
+{
+  "Dosa Kada": {
+    "paid_to": [
+      "koduru o"
+    ],
+    "notes": [
+      "yea"
+    ]
+  },
+  "Train or Bus": [
+    "ticketsi",
+    "indian r",
+    "flixbus",
+    "redbus i",
+    "irctc_ap",
+    "irctc cf"
+  ],
+  "Rent": [
+    "korivi v"
+  ],
+  "Petrol": {
+    "paid_to": [
+      "nakkara",
+      "indian o"
+    ],
+    "notes": [
+      "pt"
+    ]
+  },
+  "Cinema": [
+    "district",
+    "bookmyshow"
+  ],
+  "E-Food": [
+    "swiggy ltd",
+    "swiggy",
+    "zomato l"
+  ],
+  "E-Com": [
+    "ekart",
+    "amazon p"
+  ],
+  "Nattil kada": [
+    "prasanna",
+    "anjana t"
+  ],
+  "Metro": [
+    "bangalor"
+  ],
+  "FtFood": {
+    "paid_to": [],
+    "notes": [
+      "fad"
+    ]
+  }
+}

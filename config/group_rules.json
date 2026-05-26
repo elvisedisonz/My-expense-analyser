@@ -1,0 +1,22 @@
+[
+{
+	"group": "RD",
+	
+	"paid_to": [
+	"Emily M E",
+	"Reetha"
+	],
+	
+	"amt": 1000,
+	"occurrence": 1
+},
+
+{
+	"group": "Bmtc",
+	
+	"regex": [
+	".*BMTC.*",
+	"^KA\\d{2}[A-Z]{1,2}\\d+"
+	]
+}
+]

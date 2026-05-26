@@ -1,0 +1,8 @@
+flask
+pandas
+openpyxl
+msoffcrypto-tool
+pdfplumber
+pytest
+gunicorn
+flake8
