@@ -13,8 +13,8 @@ from app.utils import (
     build_tx_id,
 )
 
-GROUPS_FILE = Path(__file__).resolve().parent / "config" / "groups.json"
-RULES_FILE = Path(__file__).resolve().parent / "config"/"group_rules.json"
+GROUPS_FILE = Path(__file__).resolve().parent/"config"/"groups.json"
+RULES_FILE = Path(__file__).resolve().parent/"config"/"group_rules.json"
 
 REPEAT_THRESHOLD = 2
 
