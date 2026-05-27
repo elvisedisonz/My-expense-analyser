@@ -1,6 +1,7 @@
 import os
 import tempfile
 import json
+from dotenv import load_dotenv
 
 from flask import (
     Blueprint,
@@ -19,9 +20,10 @@ from app.extract_excel import excel_to_dataframe
 from app.extract_pdf import pdf_to_dataframe
 
 main = Blueprint("main", __name__)
+load_dotenv()
 
-EXCEL_PASSWORD = ""
-PDF_PASSWORD = ""
+EXCEL_PASSWORD = os.getenv("default_excel_password", "")
+PDF_PASSWORD = os.getenv("default_pdf_password", "")
 
 
 @main.route("/")
