@@ -129,7 +129,9 @@ http://localhost:5000
 ## 🔁 API Endpoints
 
 POST /upload → Upload statement
+
 POST /save_group → Save custom group
+
 POST /delete_group → Delete group
 
 ---
