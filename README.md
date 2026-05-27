@@ -89,23 +89,30 @@ A full-stack **finance analytics web app** that processes bank statements (PDF/E
 
 ## Installation & Running
 
-Step 1: If you want to run in contained python virtual env then:
+If you want to run in Android then you could run in Termux app (Linux like Terminal) or You can run in your PC.
+
+- Step 1: Get the code into your machine
+```bash
+git clone https://github.com/elvisedisonz/My-expense-analyser.git
+cd My-expense-analyser
+```
+- Step 2: If you want to run in contained python virtual env then:
 ```bash
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 ```
-Or you can skip Step 1, Proceed further
-Step 2:
+Or you can skip Step 2
+- Step 3:
 ```bash
 pip install -r requirements.txt
 ```
-Step 3:
+- Step 4:
 ```bash
 python run.py # To run using debug flask server
 gunicorn -w 2 -b 0.0.0.0:5000 run:app # To run using prod server
 ```
-Step 4:
+- Step 5:
 Open in browser:
 http://localhost:5000
 
@@ -143,9 +150,11 @@ POST /delete_group → Delete group
 
 ---
 
-## 👨‍💻 Authored By
+## 👨‍💻 Author
 
-Elvis M E
+Created by **Elvis M E**
+Github : https://github.com/elvisedisonz
+LinkedIn : 
 
 Web App built with Flask + JavaScript for personal finance tracking.
 
