@@ -242,6 +242,10 @@ input, select, button{
 	font-family:inherit;
 }
 
+input[type="password"]{
+	width: 300px;
+}
+
 button{
 	cursor:pointer;
 	transition:0.2s ease;
