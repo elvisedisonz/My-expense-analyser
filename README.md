@@ -59,6 +59,7 @@ A full-stack **finance analytics web app** that processes bank statements (PDF/E
 ---
 
 ## 📁 Main Project Structure
+```bash
 .
 ├── app
 │   ├── config
@@ -77,7 +78,7 @@ A full-stack **finance analytics web app** that processes bank statements (PDF/E
 │   └── utils.py
 ├── requirements.txt
 ├── run.py
-
+```
 ## Screenshots
 
 (add screenshots)
@@ -90,7 +91,7 @@ python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 ```
-Or you can skip Step 1
+Or you can skip Step 1, Proceed further
 Step 2:
 ```bash
 pip install -r requirements.txt
