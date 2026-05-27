@@ -152,9 +152,10 @@ POST /delete_group → Delete group
 
 ## 👨‍💻 Author
 
-Created by **Elvis M E**
-Github : https://github.com/elvisedisonz
-LinkedIn : 
+- Created by **Elvis M E**
+- Github : https://github.com/elvisedisonz
+- Email : elvisedison14@gmail.com
+- LinkedIn : 
 
 Web App built with Flask + JavaScript for personal finance tracking.
 
