@@ -1,5 +1,6 @@
 import os
 import tempfile
+import json
 
 from flask import (
     Blueprint,
@@ -11,6 +12,7 @@ from flask import (
 from app.processing import (
     process_df,
     load_groups,
+    GROUPS_FILE,
 )
 
 from app.extract_excel import excel_to_dataframe
@@ -109,3 +111,59 @@ def upload():
         })
 
     return jsonify(process_df(df, days))
+
+
+@main.route("/save_group", methods=["POST"])
+def save_group():
+
+    data = request.json
+
+    group_name = data["group"].strip()
+    entities = [e.strip().lower() for e in data["entities"]]
+    mode = data.get("mode", "paid_to")  # 👈 NEW
+
+    groups = load_groups()
+
+    if group_name not in groups:
+        groups[group_name] = {
+            "paid_to": [],
+            "notes": []
+        }
+
+    # normalize old format if needed
+    if isinstance(groups[group_name], list):
+        groups[group_name] = {
+            "paid_to": groups[group_name],
+            "notes": []
+        }
+
+    target_list = groups[group_name][mode]
+
+    existing = set(x.lower() for x in target_list)
+
+    for e in entities:
+        if e and e not in existing:
+            target_list.append(e)
+
+    with open(GROUPS_FILE, "w") as f:
+        json.dump(groups, f, indent=2)
+
+    return jsonify({"success": True})
+
+
+@main.route("/delete_group", methods=["POST"])
+def delete_group():
+
+    data = request.json
+
+    groups = load_groups()
+
+    group_name = data["group"]
+
+    if group_name in groups:
+        del groups[group_name]
+
+    with open(GROUPS_FILE, "w") as f:
+        json.dump(groups, f, indent=2)
+
+    return jsonify({"success": True})

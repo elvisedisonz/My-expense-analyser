@@ -241,7 +241,7 @@ def pdf_to_dataframe(
         ).dt.strftime("%d/%m/%Y")
 
         df = normalize_dataframe(df)
-    
+
     # ---------------- EMPTY ZERO VALUES ----------------
 
         for col in ["Debit", "Credit"]:
