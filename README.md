@@ -62,22 +62,22 @@ A full-stack **finance analytics web app** that processes bank statements (PDF/E
 ```bash
 .
 ├── app
-│   ├── config
-│   │   ├── group_rules.json
-│   │   └── groups.json
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── processing.py
+│   ├── utils.py
 │   ├── extract_excel.py
 │   ├── extract_pdf.py
-│   ├── __init__.py
-│   ├── processing.py
-│   ├── routes.py
+│   ├── templates
+│   │   └── index.html
 │   ├── static
 │   │   ├── script.js
 │   │   └── style.css
-│   ├── templates
-│   │   └── index.html
-│   └── utils.py
+│   └── config
+│         ├── groups.json
+│         └── group_rules.json
 ├── requirements.txt
-├── run.py
+└── run.py
 ```
 ## Screenshots
 
