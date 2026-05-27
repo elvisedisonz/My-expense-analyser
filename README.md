@@ -80,7 +80,12 @@ A full-stack **finance analytics web app** that processes bank statements (PDF/E
 ├── run.py
 ```
 ## Screenshots
+
 <img width="1269" height="546" alt="image" src="https://github.com/user-attachments/assets/546dce5d-cae3-430f-b5e4-ee85ce5e9428" />
+<img width="1269" height="546" alt="image" src="https://github.com/user-attachments/assets/6af94b4f-70a7-462c-a3a2-b5e54ac8acd0" />
+<img width="1269" height="546" alt="image" src="https://github.com/user-attachments/assets/ee20fbd4-026b-40ae-9f6e-225744f09e98" />
+<img width="1269" height="546" alt="image" src="https://github.com/user-attachments/assets/86d2cb26-a348-4787-bea2-06ac10f02a75" />
+<img width="1269" height="546" alt="image" src="https://github.com/user-attachments/assets/417f7e09-8a25-4c10-a5c3-b02f1176bc39" />
 
 ## Installation & Running
 
