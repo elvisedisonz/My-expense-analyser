@@ -1,3 +1,5 @@
+group_rules.json
+groups.json
 venv/
 __pycache__/
 *.pyc
